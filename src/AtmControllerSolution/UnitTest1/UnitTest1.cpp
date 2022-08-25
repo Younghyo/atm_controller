@@ -105,5 +105,20 @@ namespace UnitTest1
 			Assert::AreEqual(623, ctrl->showBalance());
 
 		}
+
+		TEST_METHOD(TestAtmWithdraw)
+		{
+			auto fakeBank = new FakeBankAPI();
+			auto ctrl = new CAtmController(fakeBank);
+
+			ctrl->readCard();
+			ctrl->enterPINcode("2580");
+			ctrl->selectAccount("0000-0000-1234-9876");
+
+			fakeBank->setBalance(500);
+			ctrl->withdraw(123);
+			Assert::AreEqual(377, ctrl->showBalance());
+
+		}
 	};
 }
