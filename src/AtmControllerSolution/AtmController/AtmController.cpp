@@ -82,8 +82,10 @@ int CAtmController::showBalance()
 
 void CAtmController::deposit(int val)
 {
+    bank->deposit(cardInfo, val);
 }
 
 void CAtmController::withdraw(int val)
 {
+    bank->withdraw(cardInfo, val);
 }
