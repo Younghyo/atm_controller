@@ -37,5 +37,17 @@ namespace UnitTest1
 			ctrl->readCard();
 			Assert::AreEqual(string("Younghyo Kim, 1234-1234-1234-1234"), ctrl->showCardInfo());
 		}
+
+		TEST_METHOD(TestAtmAuthentication)
+		{
+			auto fakeBank = new FakeBankAPI();
+			auto ctrl = new CAtmController(fakeBank);
+
+			ctrl->readCard();
+			ctrl->enterPINcode("9999");
+			Assert::IsFalse(ctrl->isAuthenticated());
+			ctrl->enterPINcode("2580");
+			Assert::IsTrue(ctrl->isAuthenticated());
+		}
 	};
 }

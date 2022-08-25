@@ -42,12 +42,20 @@ bool CAtmController::isAlive()
 void CAtmController::readCard()
 {
     cardInserted = true;
+    cardInfo = "Younghyo Kim, 1234-1234-1234-1234";
 }
 
 string CAtmController::showCardInfo()
 {
-    if (cardInserted) {
-        return "Younghyo Kim, 1234-1234-1234-1234";
-    }
-    return "";
+    return cardInfo;
+}
+
+void CAtmController::enterPINcode(string pin)
+{
+    isAuth = bank->checkPinCode(cardInfo, pin);
+}
+
+bool CAtmController::isAuthenticated()
+{
+    return isAuth;
 }

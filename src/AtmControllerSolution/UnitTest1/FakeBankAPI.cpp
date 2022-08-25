@@ -5,3 +5,9 @@ bool FakeBankAPI::isAlive()
 {
 	return true;
 }
+
+bool FakeBankAPI::checkPinCode(string cardInfo, string pin)
+{
+	if (pin == "2580") return true;
+	return false;
+}

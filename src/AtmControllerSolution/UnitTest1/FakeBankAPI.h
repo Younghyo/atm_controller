@@ -7,5 +7,8 @@ class FakeBankAPI : public BankAPI
 public:
 	// Inherited via BankAPI
 	virtual bool isAlive() override;
+
+	// Inherited via BankAPI
+	virtual bool checkPinCode(string cardInfo, string pin) override;
 };
 

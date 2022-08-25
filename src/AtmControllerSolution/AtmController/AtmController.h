@@ -29,7 +29,7 @@ public:
 	bool isAlive();
 	void readCard();
 	string showCardInfo();
-	void enterPINcode();
+	void enterPINcode(string pin);
 	bool isAuthenticated();
 	string showAllAccounts();
 	void selectAccount(string);
@@ -41,6 +41,8 @@ public:
 private:
 	BankAPI* bank = nullptr;
 	bool cardInserted = false;
+	string cardInfo = "";
+	bool isAuth = false;
 };
 
 extern ATMCONTROLLER_API int nAtmController;
