@@ -28,3 +28,8 @@ void CAtmController::foo()
 {
     cout << "foo" << endl;
 }
+
+int CAtmController::sayFive()
+{
+    return 5;
+}

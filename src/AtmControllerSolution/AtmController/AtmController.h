@@ -16,6 +16,7 @@ public:
 	CAtmController(void);
 	// TODO: add your methods here.
 	void foo();
+	int sayFive();
 };
 
 extern ATMCONTROLLER_API int nAtmController;
