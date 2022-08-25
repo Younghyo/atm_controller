@@ -27,5 +27,15 @@ namespace UnitTest1
 			
 			Assert::IsTrue(ctrl->isAlive());
 		}
+
+		TEST_METHOD(TestAtmReadCard)
+		{
+			auto fakeBank = new FakeBankAPI();
+			auto ctrl = new CAtmController(fakeBank);
+
+			Assert::AreEqual(string(""), ctrl->showCardInfo());
+			ctrl->readCard();
+			Assert::AreEqual(string("Younghyo Kim, 1234-1234-1234-1234"), ctrl->showCardInfo());
+		}
 	};
 }

@@ -39,7 +39,8 @@ public:
 	void withdraw(int val);
 
 private:
-	BankAPI* bank;
+	BankAPI* bank = nullptr;
+	bool cardInserted = false;
 };
 
 extern ATMCONTROLLER_API int nAtmController;

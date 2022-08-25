@@ -38,3 +38,16 @@ bool CAtmController::isAlive()
 {
     return bank->isAlive();
 }
+
+void CAtmController::readCard()
+{
+    cardInserted = true;
+}
+
+string CAtmController::showCardInfo()
+{
+    if (cardInserted) {
+        return "Younghyo Kim, 1234-1234-1234-1234";
+    }
+    return "";
+}
