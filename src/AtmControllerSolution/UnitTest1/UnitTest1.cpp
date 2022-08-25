@@ -17,5 +17,12 @@ namespace UnitTest1
 			auto ctrl = new CAtmController();
 			Assert::AreEqual(5, ctrl->sayFive());
 		}
+
+		TEST_METHOD(TestAtmCtrlAlive)
+		{
+			auto ctrl = new CAtmController();
+			
+			Assert::IsTrue(ctrl->isAlive());
+		}
 	};
 }

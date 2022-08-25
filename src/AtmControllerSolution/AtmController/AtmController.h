@@ -24,6 +24,7 @@ public:
 	int sayFive();
 
 	// 
+	bool isAlive();
 	void readCard();
 	string showCardInfo();
 	void enterPINcode();

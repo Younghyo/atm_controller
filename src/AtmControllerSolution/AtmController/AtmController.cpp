@@ -33,3 +33,8 @@ int CAtmController::sayFive()
 {
     return 5;
 }
+
+bool CAtmController::isAlive()
+{
+    return false;
+}
