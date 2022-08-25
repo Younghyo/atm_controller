@@ -10,5 +10,8 @@ public:
 
 	// Inherited via BankAPI
 	virtual bool checkPinCode(string cardInfo, string pin) override;
+
+	// Inherited via BankAPI
+	virtual string showAllAccounts(string cardInfo) override;
 };
 

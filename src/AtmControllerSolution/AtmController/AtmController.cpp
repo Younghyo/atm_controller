@@ -59,3 +59,30 @@ bool CAtmController::isAuthenticated()
 {
     return isAuth;
 }
+
+string CAtmController::showAllAccounts()
+{
+    return bank->showAllAccounts(cardInfo);
+}
+
+void CAtmController::selectAccount(string)
+{
+}
+
+string CAtmController::currentAccount()
+{
+    return string();
+}
+
+int CAtmController::showBalance()
+{
+    return 0;
+}
+
+void CAtmController::deposit(int val)
+{
+}
+
+void CAtmController::withdraw(int val)
+{
+}
