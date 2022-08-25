@@ -76,5 +76,19 @@ namespace UnitTest1
 			Assert::AreEqual(string("0000-0000-1234-9876"),
 				ctrl->currentAccount());
 		}
+
+		TEST_METHOD(TestAtmShowBalance)
+		{
+			auto fakeBank = new FakeBankAPI();
+			auto ctrl = new CAtmController(fakeBank);
+
+			ctrl->readCard();
+			ctrl->enterPINcode("2580");
+			ctrl->selectAccount("0000-0000-1234-9876");
+
+			fakeBank->setBalance(500);
+			Assert::AreEqual(500, ctrl->showBalance());
+			
+		}
 	};
 }

@@ -77,7 +77,7 @@ string CAtmController::currentAccount()
 
 int CAtmController::showBalance()
 {
-    return 0;
+    return bank->showBalance(cardInfo);
 }
 
 void CAtmController::deposit(int val)
