@@ -13,10 +13,12 @@
 #include <string>
 using namespace std;
 
+#include "BankAPI.h"
+
 // This class is exported from the dll
 class ATMCONTROLLER_API CAtmController {
 public:
-	CAtmController(void);
+	CAtmController(BankAPI *bank);
 	// TODO: add your methods here.
 
 	// for tests
@@ -35,6 +37,9 @@ public:
 	int showBalance();
 	void deposit(int val);
 	void withdraw(int val);
+
+private:
+	BankAPI* bank;
 };
 
 extern ATMCONTROLLER_API int nAtmController;

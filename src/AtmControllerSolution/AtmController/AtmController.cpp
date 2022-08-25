@@ -19,9 +19,9 @@ ATMCONTROLLER_API int fnAtmController(void)
 }
 
 // This is the constructor of a class that has been exported.
-CAtmController::CAtmController()
+CAtmController::CAtmController(BankAPI* bank)
 {
-    return;
+    this->bank = bank;
 }
 
 void CAtmController::foo()
@@ -36,5 +36,5 @@ int CAtmController::sayFive()
 
 bool CAtmController::isAlive()
 {
-    return false;
+    return bank->isAlive();
 }

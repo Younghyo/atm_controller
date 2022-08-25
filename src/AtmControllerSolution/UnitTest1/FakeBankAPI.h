@@ -4,6 +4,7 @@
 
 class FakeBankAPI : public BankAPI
 {
+public:
 	// Inherited via BankAPI
 	virtual bool isAlive() override;
 };

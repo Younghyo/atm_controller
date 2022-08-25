@@ -7,7 +7,7 @@
 
 int main()
 {
-    auto ctrl = new CAtmController();
+    auto ctrl = new CAtmController(nullptr);
     ctrl->foo();
     std::cout << "Hello World!\n";
 }
