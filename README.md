@@ -9,3 +9,5 @@ how to build and test
 2. rebuild solution
 3. run all test in the Test menu
 4. the Test Explorer comes up and show the test result
+
+![Test result](test_result.jpg "Test Result")
