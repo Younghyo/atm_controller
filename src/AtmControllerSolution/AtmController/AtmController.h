@@ -43,6 +43,7 @@ private:
 	bool cardInserted = false;
 	string cardInfo = "";
 	bool isAuth = false;
+	string account = "";
 };
 
 extern ATMCONTROLLER_API int nAtmController;

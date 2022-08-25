@@ -65,13 +65,14 @@ string CAtmController::showAllAccounts()
     return bank->showAllAccounts(cardInfo);
 }
 
-void CAtmController::selectAccount(string)
+void CAtmController::selectAccount(string account)
 {
+    this->account = account;
 }
 
 string CAtmController::currentAccount()
 {
-    return string();
+    return account;
 }
 
 int CAtmController::showBalance()
