@@ -10,13 +10,30 @@
 #define ATMCONTROLLER_API __declspec(dllimport)
 #endif
 
+#include <string>
+using namespace std;
+
 // This class is exported from the dll
 class ATMCONTROLLER_API CAtmController {
 public:
 	CAtmController(void);
 	// TODO: add your methods here.
+
+	// for tests
 	void foo();
 	int sayFive();
+
+	// 
+	void readCard();
+	string showCardInfo();
+	void enterPINcode();
+	bool isAuthenticated();
+	string showAllAccounts();
+	void selectAccount(string);
+	string currentAccount();
+	int showBalance();
+	void deposit(int val);
+	void withdraw(int val);
 };
 
 extern ATMCONTROLLER_API int nAtmController;
