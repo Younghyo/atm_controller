@@ -1,0 +1,2 @@
+#define ATMCONTROLLER_API __declspec(dllexport)
+#define ATMCONTROLLER_API __declspec(dllimport)
